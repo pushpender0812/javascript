@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pushpender yadav | DOM</title>
+</head>
+<body style="background-color: #212121;color: #fff;">
+   <ul class="language">
+    <li>javascript</li>
+   </ul> 
+</body>
+<script>
+    function addlanguage (langname){
+       const li  =   document.createElement('li')
+       li.innerHTML = `${langname}`
+       document.querySelector('.language').appendChild(li)
+    }
+    addlanguage("Html")
+    addlanguage("css")
+
+    function addoptlang (langname){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+    }
+      addoptlang("React.js")
+
+      // Edit 
+
+     const secondlang = document.querySelector("li:nth-child(2)")
+    //  secondlang.innerHTML = "express"
+     const newli = document.createElement('li')
+     newli.textContent = "express"
+     secondlang.replaceWith(newli)
+
+     const firstlang = document.querySelector('li:nth-child(1)')
+    //  firstlang.innerHTML = "python"
+    const neli = document.createElement('li')
+    neli.textContent = "python"
+    firstlang.replaceWith(neli)
+
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
+
+</script>
+</html>
